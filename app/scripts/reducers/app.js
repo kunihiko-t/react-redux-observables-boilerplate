@@ -4,7 +4,7 @@
  * @desc App Reducer
  */
 
-import { REHYDRATE } from 'redux-persist/constants';
+import { REHYDRATE } from 'redux-persist';
 import { createReducer } from 'utils/helpers';
 
 import { ActionTypes } from 'constants/index';
@@ -22,7 +22,7 @@ export const appState = {
 export default {
   app: createReducer(appState, {
     [REHYDRATE](state, action) {
-      return Object.assign({}, state, action.payload.app, {
+      return Object.assign({}, state, action.payload, {
         notifications: appState.notifications,
         rehydrated: true,
       });

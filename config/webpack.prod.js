@@ -56,7 +56,7 @@ const config = merge.smart(webpackConfig, {
       cacheMaps: [
         {
           match: function() { //eslint-disable-line object-shorthand
-            return new URL('/', location);
+            return new URL('/', window.location);
           },
           requestTypes: ['navigate'],
         },

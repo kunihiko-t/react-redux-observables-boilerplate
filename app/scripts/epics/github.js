@@ -23,6 +23,5 @@ export function fetchPopularRepos(action$) {
             payload: { message: error.message, status: error.status },
             error: true,
           },
-        ])
-    );
+        ]));
 }

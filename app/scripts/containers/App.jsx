@@ -25,7 +25,9 @@ export class App extends React.Component {
   };
 
   render() {
-    const { app, dispatch, router, user } = this.props;
+    const {
+      app, dispatch, router, user,
+    } = this.props;
     let html = (<Loader />);
 
     if (app.rehydrated) {

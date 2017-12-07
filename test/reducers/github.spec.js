@@ -1,4 +1,4 @@
-import { REHYDRATE } from 'redux-persist/constants';
+import { REHYDRATE } from 'redux-persist';
 
 import reducers from 'reducers';
 import { ActionTypes } from 'constants/index';
@@ -9,7 +9,7 @@ describe('Github', () => {
   });
 
   it(`should handle ${REHYDRATE} with payload`, () => {
-    expect(reducers.github(undefined, { type: REHYDRATE, payload: { github: { logged: true } } })).toMatchSnapshot();
+    expect(reducers.github(undefined, { type: REHYDRATE, payload: { logged: true } })).toMatchSnapshot();
   });
 
   it(`should handle ${REHYDRATE} without payload`, () => {

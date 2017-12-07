@@ -31,16 +31,18 @@ export class Private extends React.PureComponent {
   render() {
     const { github: { popularRepos } } = this.props;
     const output = {
-      html: (<div className="app__cancel">
-        <a
-          href="#cancel"
-          className="btn btn-primary btn-sm btn-icon btn-icon--lg"
-          onClick={this.handleClickCancel}
-        >
-          <i className="i-times-circle" />
-          <span>Cancel</span>
-        </a>
-      </div>),
+      html: (
+        <div className="app__cancel">
+          <a
+            href="#cancel"
+            className="btn btn-primary btn-sm btn-icon btn-icon--lg"
+            onClick={this.handleClickCancel}
+          >
+            <i className="i-times-circle" />
+            <span>Cancel</span>
+          </a>
+        </div>
+      ),
       loader: (<Loader />),
     };
 
@@ -50,11 +52,12 @@ export class Private extends React.PureComponent {
       output.html = (
         <div className="app__private__repos">
           {popularRepos.data.map(d =>
-            (<div key={d.name}>
-              <a href={d.html_url} target="_blank">{`${d.owner.login}/${d.name}`}</a>
-              <div>{d.description}</div>
-            </div>)
-          )}
+            (
+              <div key={d.name}>
+                <a href={d.html_url} target="_blank">{`${d.owner.login}/${d.name}`}</a>
+                <div>{d.description}</div>
+              </div>
+            ))}
         </div>
       );
     }

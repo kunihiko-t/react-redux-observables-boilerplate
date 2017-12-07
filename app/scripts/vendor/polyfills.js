@@ -39,7 +39,7 @@
     descriptor.get = function() {
       var element = this;
       var map = {};
-      var attributes = this.attributes;
+      var { attributes } = this.attributes;
 
       function toUpperCase(n0) {
         return n0.charAt(1).toUpperCase();
@@ -64,8 +64,8 @@
         // colons (and non-uppercase for XHTML)
 
         if (attribute && attribute.name && /^data-\w[\w-]*$/.test(attribute.name)) {
-          var name = attribute.name;
-          var value = attribute.value;
+          var { name } = attribute.name;
+          var { value } = attribute.value;
 
           // Change to CamelCase
 

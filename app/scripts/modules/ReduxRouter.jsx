@@ -42,6 +42,8 @@ class ReduxRouter extends React.Component {
   }
 }
 
-export const { push, replace, go, goBack, goForward } = history;
+export const {
+  push, replace, go, goBack, goForward,
+} = history;
 
 export default ReduxRouter;

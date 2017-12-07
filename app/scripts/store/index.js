@@ -13,9 +13,7 @@ const store = configStore();
 
 /* istanbul ignore if  */
 if (process.env.NODE_ENV !== 'test') {
-  persistStore(store, {
-    whitelist: ['app', 'github', 'user'],
-  });
+  persistStore(store, null, null);
 }
 
 export default store;

@@ -22,8 +22,7 @@ describe('github', () => {
       res
         .status(200)
         .header('Content-Type', 'application/json')
-        .body(payload)
-    );
+        .body(payload));
 
     store.dispatch({ type: ActionTypes.FETCH_POPULAR_REPOS_REQUEST });
 
@@ -43,8 +42,7 @@ describe('github', () => {
   it('fetchPopularRepos should return FAILURE', done => {
     xhrMock.get('https://api.github.com/search/repositories?q=+language:javascript+created:%3E2016-10-01&sort=stars&order=desc', (req, res) =>
       res
-        .status(404)
-    );
+        .status(404));
 
     store.dispatch({ type: ActionTypes.FETCH_POPULAR_REPOS_REQUEST });
 

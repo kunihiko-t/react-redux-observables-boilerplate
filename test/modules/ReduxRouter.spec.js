@@ -1,7 +1,10 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 import ReduxRouter from 'modules/ReduxRouter';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 const mockUnsubscribe = jest.fn();
 const mockListen = jest.fn(() => mockUnsubscribe);

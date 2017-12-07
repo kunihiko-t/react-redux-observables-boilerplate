@@ -7,13 +7,13 @@ const RedirectProtected = ({ component: Component, isAuthenticated, ...rest }) =
     {...rest}
     render={props => (
       isAuthenticated ?
-      (<Component {...props} />) :
-      (<Redirect
-        to={{
-          pathname: '/login',
-          state: { from: props.location.pathname, isAuthenticated },
-        }}
-      />)
+        (<Component {...props} />) :
+        (<Redirect
+          to={{
+            pathname: '/login',
+            state: { from: props.location.pathname, isAuthenticated },
+          }}
+        />)
     )}
   />
 );

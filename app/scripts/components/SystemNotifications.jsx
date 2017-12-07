@@ -25,7 +25,7 @@ const SystemNotifications = ({ app, dispatch }) => {
     }, 3500);
   }
 
-  const notifications = app.notifications;
+  const { notifications } = app;
   const iconClass = {
     success: 'i-thumbs-up',
     warning: 'i-exclamation-circle',

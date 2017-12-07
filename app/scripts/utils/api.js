@@ -99,8 +99,7 @@ export function request(action: Object = {}): Promise<Object | string> {
               code: error.response.status,
               error: error.response.statusText,
               data: text,
-            })
-          );
+            }));
         }
       });
   });

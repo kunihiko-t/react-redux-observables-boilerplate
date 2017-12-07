@@ -3,7 +3,7 @@
  * @desc User Reducer
  */
 
-import { REHYDRATE } from 'redux-persist/constants';
+import { REHYDRATE } from 'redux-persist';
 import { createReducer } from 'utils/helpers';
 
 import { ActionTypes } from 'constants/index';
@@ -17,7 +17,7 @@ export const userState = {
 export default {
   user: createReducer(userState, {
     [REHYDRATE](state, action) {
-      return Object.assign({}, state, action.payload.user, {
+      return Object.assign({}, state, action.payload, {
         rehydrated: true,
       });
     },

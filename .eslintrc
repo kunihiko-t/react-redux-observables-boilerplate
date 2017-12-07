@@ -35,6 +35,7 @@
       "functions": "only-multiline"
     }],
     "dot-notation": 1,
+    "function-paren-newline": 0,
     "generator-star-spacing": 0,
     "global-require": 0,
     "indent": [1, 2, { "SwitchCase": 1 }],
@@ -69,6 +70,7 @@
     "padded-blocks": 1,
     "prefer-const": 1,
     "prefer-template": 1,
+    "prefer-promise-reject-errors": 0,
     "quotes": [1, "single", "avoid-escape"],
     "require-jsdoc": [
       0, {

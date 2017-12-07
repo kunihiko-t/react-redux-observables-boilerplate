@@ -1,6 +1,6 @@
 /*eslint-disable no-var, vars-on-top, no-console */
 const path = require('path');
-const exec = require('child_process').exec;
+const { exec } = require('child_process');
 const del = require('del');
 const chalk = require('chalk');
 const Rsync = require('rsync');
@@ -13,8 +13,7 @@ if (!args[0]) {
   • deploy (build & publish)
   • docs (rebuild documentation)
   • update (if package.json has changed run \`npm update\`)
-  • commits (has new remote commits)`
-  );
+  • commits (has new remote commits)`);
 }
 
 function publish() {

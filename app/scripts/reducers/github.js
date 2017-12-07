@@ -3,7 +3,7 @@
  * @desc Github Reducer
  */
 
-import { REHYDRATE } from 'redux-persist/constants';
+import { REHYDRATE } from 'redux-persist';
 import { createReducer } from 'utils/helpers';
 
 import { ActionTypes } from 'constants/index';
@@ -21,7 +21,7 @@ export const githubState = {
 export default {
   github: createReducer(githubState, {
     [REHYDRATE](state, action) {
-      return Object.assign({}, state, action.payload.github, {
+      return Object.assign({}, state, action.payload, {
         rehydrated: true,
       });
     },

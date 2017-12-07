@@ -1,4 +1,4 @@
-import { REHYDRATE } from 'redux-persist/constants';
+import { REHYDRATE } from 'redux-persist';
 
 import reducers from 'reducers';
 import { ActionTypes } from 'constants/index';
@@ -9,7 +9,7 @@ describe('User', () => {
   });
 
   it(`should handle ${REHYDRATE} with payload`, () => {
-    expect(reducers.user(undefined, { type: REHYDRATE, payload: { user: { logged: true } } })).toMatchSnapshot();
+    expect(reducers.user(undefined, { type: REHYDRATE, payload: { logged: true } })).toMatchSnapshot();
   });
 
   it(`should handle ${REHYDRATE} without payload`, () => {

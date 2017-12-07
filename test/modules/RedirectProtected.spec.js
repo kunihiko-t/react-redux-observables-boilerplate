@@ -13,7 +13,8 @@ describe('utils/RedirectProtected', () => {
           component={() => (<div>PRIVATE</div>)}
           isAuthenticated={false}
         />
-      </Router>);
+      </Router>
+    );
 
     expect(render).toMatchSnapshot();
   });

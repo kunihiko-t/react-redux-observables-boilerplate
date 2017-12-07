@@ -5,9 +5,10 @@
     "stylelint-scss"
   ],
   "rules": {
+    "at-rule-no-unknown": null,
     "at-rule-empty-line-before": [
       "always",
-      { "except": ["blockless-group", "first-nested"], "ignore": ["after-comment"] }
+      { "except": [ "first-nested"], "ignore": ["after-comment"] }
     ],
     "color-named": "never",
     "declaration-colon-newline-after": null,
@@ -16,11 +17,13 @@
       "/^border/": ["none"]
     },
     "function-url-quotes": "always",
+    "font-family-no-missing-generic-family-keyword": null,
     "indentation": [2, { "ignore": ["value"] }],
     "max-nesting-depth": 5,
     "no-duplicate-selectors": true,
     "no-empty-source": [true, { "severity": "warning" }],
     "no-missing-end-of-source-newline": true,
+    "no-descending-specificity": null,
     "number-max-precision": 4,
     "property-no-vendor-prefix": true,
     "selector-class-pattern": "^((?:-{1,2}|_{2})?[a-z0-9]+(?:(?:-{1,2}|_{2})[a-z0-9]+)*)(?:-{1,2}|_{2})?$",
@@ -36,17 +39,6 @@
         }
       }
     ],
-    "order/declaration-block-order": [
-      "custom-properties",
-      "dollar-variables",
-      { "type": "at-rule", "name": "extend" },
-      { "type": "at-rule", "name": "include", "hasBlock": false },
-      "declarations",
-      { "type": "at-rule", "name": "include", "parameter": "/ix|sm|is|md|im|lg|xl|xxl/", "hasBlock": true },
-      "rules",
-      "at-rules"
-    ],
-    "order/declaration-block-properties-alphabetical-order": true,
     "scss/at-import-no-partial-leading-underscore": true,
     "scss/at-import-partial-extension-blacklist": ["scss"],
     "scss/dollar-variable-colon-space-after": "always",

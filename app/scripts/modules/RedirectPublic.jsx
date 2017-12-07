@@ -7,8 +7,8 @@ const RedirectPublic = ({ component: Component, isAuthenticated, ...rest }) => (
     {...rest}
     render={props => (
       isAuthenticated ?
-      (<Redirect to="/private" />) :
-      (<Component {...props} />)
+        (<Redirect to="/private" />) :
+        (<Component {...props} />)
     )}
   />
 );

@@ -21,6 +21,14 @@
     text-decoration: none;
   }
 
+  > div {
+    align-items: center;
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 1.5rem, rgba(#000, 0.1) 1.5rem, rgba(#000, 0.1) 3rem);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  }
+
   &:hover {
     > div {
       transform: scale(1.1);
@@ -33,27 +41,19 @@
   }
 
   &.success {
-    background-color: $brand-success;
+    background-color: theme-color('success');
   }
 
   &.warning {
-    background-color: $brand-warning;
+    background-color: theme-color('warning');
   }
 
   &.error {
-    background-color: $brand-danger;
+    background-color: theme-color('danger');
   }
 
   &.info {
-    background-color: $brand-info;
-  }
-
-  > div {
-    align-items: center;
-    background-image: repeating-linear-gradient(-45deg, transparent, transparent 1.5rem, rgba(#000, 0.1) 1.5rem, rgba(#000, 0.1) 3rem);
-    display: flex;
-    height: 100%;
-    justify-content: center;
+    background-color: theme-color('info');
   }
 
   [class^=i-] {
