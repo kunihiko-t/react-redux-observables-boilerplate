@@ -13,7 +13,7 @@ engines:
       import/no-unresolved:
         enabled: false
   stylelint:
-    enabled: true
+    enabled: false
     channel: "beta"
 ratings:
   paths:
