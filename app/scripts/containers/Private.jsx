@@ -7,6 +7,7 @@ import { ActionTypes } from 'constants/index';
 import { fetchPopularRepos } from 'actions';
 
 import Loader from 'components/Loader';
+import SubHeader from 'components/SubHeader';
 
 export class Private extends React.PureComponent {
   static propTypes = {
@@ -66,6 +67,7 @@ export class Private extends React.PureComponent {
       <div key="Private" className="app__private app__route">
         <div className="app__container">
           <h2>Popular Repos</h2>
+          <SubHeader title="test" />
           {output.loader}
           {output.html}
         </div>
